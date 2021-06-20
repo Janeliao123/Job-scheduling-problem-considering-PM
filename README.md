@@ -1,2 +1,2 @@
-# Stochastic-programming-in-job-scheduling-problem-considering-PM
+# Job scheduling problem considering PM
 ORA final project
