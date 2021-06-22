@@ -22,7 +22,7 @@ the maintenance planning problem by our model using **stochastic programming**, 
 
 ### 2.1 Job Scheduling
 
-As mentioned above, we apply WSPT to decide the job sequence. For the <img src="https://latex.codecogs.com/svg.image?$i_{th}$" title="$i_{th}$" /> job, we calculate the ratio <img src="https://latex.codecogs.com/svg.image?𝑟_i=\frac{w_i}{p_i}&space;" title="𝑟_i=\frac{w_i}{p_i} " />, where $w_i$ is the weight and <img src="https://latex.codecogs.com/svg.image?$p_i$&space;" title="$p_i$ " /> is the processing time of the  job. We list the job sequence based on <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> since the higher the <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> is the more important the job should be done earlier.
+As mentioned above, we apply WSPT to decide the job sequence. For the ![formula](https://render.githubusercontent.com/render/math?math=i_{th}) job, we calculate the ratio <img src="https://latex.codecogs.com/svg.image?𝑟_i=\frac{w_i}{p_i}&space;" title="𝑟_i=\frac{w_i}{p_i} " />, where $w_i$ is the weight and <img src="https://latex.codecogs.com/svg.image?$p_i$&space;" title="$p_i$ " /> is the processing time of the  job. We list the job sequence based on <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> since the higher the <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> is the more important the job should be done earlier.
 
 ### 2.2 PM Planning
 #### The stochastic model
