@@ -102,8 +102,11 @@ The second parameter of Weibull distribution is ![formula](https://render.github
 
 ## 4 Conclusion
 From the previous study, we get some insights about the problem of job scheduling considering maintenance planning problems. Based on those insights, we will provide some suggestions to the decision maker. 
+
 The first insight is about the effect of the parameters in Weibull distribution. Different machines/companies should use different parameters of Weibull distribution to model the expected machine failure times, since different parameters have different meaning. (E.g. large beta means the machine is not likely to fail when the age of the machine is small but is likely fail many times when it gets older). 
+
 Second, the SP can achieve better performance than periodic maintenance since it considers more conditions and adjust the PM schedule to get better results. However, since the mathematical model usually costs more time to solve the problem, one should also consider the time spent for each method to make the final decision when having more jobs and more machines. Though the numerical experiment proves that our model reaches the optimal solution in all the cases in a reasonable time, we might have hundreds of jobs waiting to be scheduled in the real manufacturing process and the model we proposed may cost lots of time. So consider the cost of time usage is also very important. 
+
 For the future work, we think one can consider more variable, such as the demand fluctuation or raw material supply when decide job scheduling and maintenance planning. Therefore, to design an efficient algorithm to solve this complex problem is still a further topic to study.  
 
 ## 5 Reference
