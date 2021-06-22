@@ -1,4 +1,3 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 # A job scheduling problem considering preventive maintenance
 
 ## 1.Introduction
@@ -23,13 +22,13 @@ the maintenance planning problem by our model using **stochastic programming**, 
 
 ### 2.1 Job Scheduling
 
-As mentioned above, we apply WSPT to decide the job sequence. For the $i_{th}$ job, we calculate the ratio $𝑟_i=\frac{w_i}{p_i}$, where $w_i$ is the weight and $p_i$ is the processing time of the $i_{th}$ job. We list the job sequence based on $r_i$ since the higher the $r_i$ is the more important the job should be done earlier.
+As mentioned above, we apply WSPT to decide the job sequence. For the <img src="https://latex.codecogs.com/svg.image?$i_{th}$" title="$i_{th}$" /> job, we calculate the ratio <img src="https://latex.codecogs.com/svg.image?𝑟_i=\frac{w_i}{p_i}&space;" title="𝑟_i=\frac{w_i}{p_i} " />, where $w_i$ is the weight and <img src="https://latex.codecogs.com/svg.image?$p_i$&space;" title="$p_i$ " /> is the processing time of the  job. We list the job sequence based on <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> since the higher the <img src="https://latex.codecogs.com/svg.image?$r_i$&space;" title="$r_i$ " /> is the more important the job should be done earlier.
 
 ### 2.2 PM Planning
 #### The stochastic model
 After listing the job by WSPT, we take the job sequence as an input of the next phase, which is the PM planning problem. The model is described as follows, where M is a large enough number.
 ![](https://i.imgur.com/rABC2Oe.png)
-The objective value is to minimize the total weighted completion time. Constraints (1) define the expected value of completion time for the $i_{th}$ job. Constraints (2) propose a cumulative distribution function of Weibull distribution according to a certain age of machine $a_i$, and the function requires two parameters $\beta$ and $\eta$. Constraints (3) ensure that the age of the machine goes back to the minimum age after a PM happens. Constraints (4) define the recent age of the machine is the age of the machine after deciding maintenance plus the processing time of job $j$. Constraints (5) are some binary constraints.
+The objective value is to minimize the total weighted completion time. Constraints (1) define the expected value of completion time for the <img src="https://latex.codecogs.com/svg.image?$i_{th}$" title="$i_{th}$" /> job. Constraints (2) propose a cumulative distribution function of Weibull distribution according to a certain age of machine $a_i$, and the function requires two parameters $\beta$ and $\eta$. Constraints (3) ensure that the age of the machine goes back to the minimum age after a PM happens. Constraints (4) define the recent age of the machine is the age of the machine after deciding maintenance plus the processing time of job $j$. Constraints (5) are some binary constraints.
 However, the model we mention above is nonlinear and the Gurobi cannot solve when the model is over the third power. Therefore, we use the piecewise technique according to Chang (2002) and revise the linearization model below, where M is a large enough number.
 
 #### The peicewise stochastic model
