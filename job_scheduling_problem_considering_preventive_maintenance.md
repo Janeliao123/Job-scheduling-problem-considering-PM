@@ -7,9 +7,13 @@
     - [2.1 Job Scheduling](#2.1-Job-Scheduling)
     - [2.2 PM Planning](#2.2-PM-Planning)
 - [3. Numerical Experiments](#3-Numerical-Experiments)
+    - [3.1 Experiment setting] (#3.1-Experiment-setting)
+    - [3.2 Evaluation method] (#3.2-Evaluation-method)
+    - [3.3 Experiment result] (#3.3-Experiment-result)
 - [4 Conclusion](#4-Conclusion)
 - [5 Reference](#5-Reference)
-- 
+
+
 ## 1 Introduction
 
 Job scheduling and maintenance planning are two of the most important topics for manufacturing business. Companies that plan the job sequence and maintenance properly can not only save more budget but also spend less time to get the same yield. 
