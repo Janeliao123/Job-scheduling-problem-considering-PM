@@ -2,7 +2,7 @@
 - 2021.02 - 2021.06
 - Final project of Operations Research Applications in NTU.
 - Author: 廖梓妘, 黃思凱
-- Director: 李家岩教授
+- Director: [李家岩教授](http://polab.im.ntu.edu.tw/Bio.html)
 
 ## Abstract
 
