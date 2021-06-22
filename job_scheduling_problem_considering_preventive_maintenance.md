@@ -7,9 +7,9 @@
     - [2.1 Job Scheduling](#2.1-Job-Scheduling)
     - [2.2 PM Planning](#2.2-PM-Planning)
 - [3. Numerical Experiments](#3-Numerical-Experiments)
-    - [3.1 Experiment setting] (#3.1-Experiment-setting)
-    - [3.2 Evaluation method] (#3.2-Evaluation-method)
-    - [3.3 Experiment result] (#3.3-Experiment-result)
+    - [3.1 Experiment setting](#3.1-Experiment-setting)
+    - [3.2 Evaluation method](#3.2-Evaluation-method)
+    - [3.3 Experiment result](#3.3-Experiment-result)
 - [4 Conclusion](#4-Conclusion)
 - [5 Reference](#5-Reference)
 
@@ -55,6 +55,8 @@ The objective value is to minimize the total weighted completion time. Constrain
 ![](https://i.imgur.com/xa9PKIo.png)
 ![](https://i.imgur.com/QK5wwTF.png)
 
+The detail code of the two models mention above can be accessed [here](https://github.com/Janeliao123/Job-scheduling-problem-considering-PM/blob/main/model.ipynb).
+
 ## 3 Numerical Experiments
 
 In this section, we present our experiment setting and also the performance of our model and baseline model. We also discuss the impact of Weibull distribution parameters to our method.
@@ -65,6 +67,8 @@ We proposed a numerical experiment to evaluate the efficiency of the piecewise m
 To evaluate the performance of our proposed model, we adopt three factors to analyze the performance under different circumstances. The first factor is the  number of jobs. The second and the third factor are the parameters of the Weibull distribution. We create 7 different scenarios to evaluate our model where each scenario we randomly generate 20 dataset and calculate the average saving of each scenario. The detailed setting of each scenario is listed in the table below.
 
 ![](https://i.imgur.com/Ymj7qpZ.png)
+
+The code where we generate the data set is proposed [here](https://github.com/Janeliao123/Job-scheduling-problem-considering-PM/blob/main/create_testdata.ipynb).
 
 ### 3.2 Evaluation method
 To evaluate our model, we use ‘saving’ to check the performance. Saving is defined as the difference between the objective value of the target method and the objective value of the greedy method. Since in our case, we want to minimize the weighted time, the greedy method is sure to get the optimal minimized value for each scenario. The method that has the lower saving, showing it finds a solution that is close to the optimal minimized value and thus has better performance.
@@ -88,7 +92,6 @@ The saving of our method outperforms the baseline method in all scenarios. The a
 To see the impact of the two parameters of Weibull distribution, we calculate the sum of the number of PM in each position and also the total number of PM out of $20$ datasets for the four scenarios. 
 
 ![](https://i.imgur.com/AZYVpYL.png)
-
 
 For the first parameter of Weibull distribution, ![formula](https://render.githubusercontent.com/render/math?math={\eta}), we can see that the total number of PM is much larger when ![formula](https://render.githubusercontent.com/render/math?math={\eta}) is smaller. This is because ![formula](https://render.githubusercontent.com/render/math?math={\eta}) control the expected number of failure ![formula](https://render.githubusercontent.com/render/math?math={m(\tau)}). Since ![formula](https://render.githubusercontent.com/render/math?math={\eta}) is the denominator in the function, the expected number of failure ![formula](https://render.githubusercontent.com/render/math?math={m(\tau)}) is higher when ![formula](https://render.githubusercontent.com/render/math?math={\eta}) is smaller. Therefore, it makes sense to plan more PM when ![formula](https://render.githubusercontent.com/render/math?math={\eta}) is smaller. 
 The second parameter of Weibull distribution is ![formula](https://render.githubusercontent.com/render/math?math={\beta}). We can see that there is no big difference between the total number of PM when ![formula](https://render.githubusercontent.com/render/math?math={\beta}) changes. However, when ![formula](https://render.githubusercontent.com/render/math?math={\beta}) is larger, our method tends to set more PM in the later position. This is because ![formula](https://render.githubusercontent.com/render/math?math={\beta}) controls the distribution of ![formula](https://render.githubusercontent.com/render/math?math={m((\tau))}) like Figure 1. When ![formula](https://render.githubusercontent.com/render/math?math={\beta}) is larger, the value of ![formula](https://render.githubusercontent.com/render/math?math={m((\tau))}) increases slowly first but increases tremendously afterwards. As a result, it makes sense to set more PM behind when ![formula](https://render.githubusercontent.com/render/math?math={\beta}) is larger. 
