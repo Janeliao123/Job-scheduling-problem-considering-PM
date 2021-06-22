@@ -27,18 +27,19 @@ As mentioned above, we apply WSPT to decide the job sequence. For the ![formula]
 ### 2.2 PM Planning
 #### The stochastic model
 After listing the job by WSPT, we take the job sequence as an input of the next phase, which is the PM planning problem. The model is described as follows, where M is a large enough number.
-![](https://i.imgur.com/rABC2Oe.png)
+
+![](https://i.imgur.com/LBWx3oi.png)
+
 The objective value is to minimize the total weighted completion time. Constraints (1) define the expected value of completion time for the ![formula](https://render.githubusercontent.com/render/math?math=i_{th})job. Constraints (2) propose a cumulative distribution function of Weibull distribution according to a certain age of machine ![formula](https://render.githubusercontent.com/render/math?math={a_i}), and the function requires two parameters ![formula](https://render.githubusercontent.com/render/math?math={\beta}) and ![formula](https://render.githubusercontent.com/render/math?math={\eta}). Constraints (3) ensure that the age of the machine goes back to the minimum age after a PM happens. Constraints (4) define the recent age of the machine is the age of the machine after deciding maintenance plus the processing time of job ![formula](https://render.githubusercontent.com/render/math?math={j}). Constraints (5) are some binary constraints.
 However, the model we mention above is nonlinear and the Gurobi cannot solve when the model is over the third power. Therefore, we use the piecewise technique according to Chang (2002) and revise the linearization model below, where M is a large enough number.
 
 #### The peicewise stochastic model
 
-![](https://i.imgur.com/cedXuKs.png)
-
+![](https://i.imgur.com/2FyfJHy.png)
 
 The objective value is to minimize the total weighted completion time. Constraints (7) define the expected value of completion time for the i_th job and replace the polynomial function into a piecewise function. Constraints (8) to (18) are some new constraints due to the piecewise process. Constraints (3) are some binary constraints for the decision variables due to the piecewise process. The rest of the constraints are the same as mentioned above. The notation of our model is listed below.
-![](https://i.imgur.com/L23D4oo.png)
-![](https://i.imgur.com/DtM5DFg.png)
+![](https://i.imgur.com/xa9PKIo.png)
+![](https://i.imgur.com/QK5wwTF.png)
 
 ## 3 Numerical Experiments
 
