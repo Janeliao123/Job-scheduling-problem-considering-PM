@@ -1,6 +1,16 @@
 # A job scheduling problem considering preventive maintenance
 
-## 1.Introduction
+**Table of Contents**
+- [1. Introduction](#1-Introduction)
+    - [1.1 Job scheduling problem](##1.1-Job-scheduling-problem) 
+- [2.Methodology](#2-Methodology)
+    - [2.1 Job Scheduling](#2.1-Job-Scheduling)
+    - [2.2 PM Planning](#2.2-PM-Planning)
+- [3. Numerical Experiments](#3-Numerical-Experiments)
+- [4 Conclusion](#4-Conclusion)
+- [5 Reference](#5-Reference)
+- 
+## 1 Introduction
 
 Job scheduling and maintenance planning are two of the most important topics for manufacturing business. Companies that plan the job sequence and maintenance properly can not only save more budget but also spend less time to get the same yield. 
 
@@ -15,7 +25,7 @@ For maintenance planning, most types of maintenance fall into two main categorie
 
 In this study, we analyze both job scheduling and maintenance planning problems. Since the WSPT method usually can reach the optimal solution and spend less time than the mathematical model, we use the WSPT method to decide the job schedule. To consider the maintenance planning problem, we focus on PM planning, and our goal is to minimize total weighted completion time. Specifically, we use stochastic programming to model the problem and we model the uncertainty of machine failure as Weibull distribution. We compare our method with other baseline methods by evaluating saving. Moreover, we analyze the impact of parameters in the Weibull distribution and give insights and application examples to decision makers.
 
-## 2. Methodology
+## 2 Methodology
 
 In this section, we proposed a model to solve the job scheduling problem considering maintenance. There are two phases in our study. Frist, we use the rule **WSPT** to determine the job sequence, and second, based on the job sequence , we solve
 the maintenance planning problem by our model using **stochastic programming**, which the objective is to minimize the total weighted completion time, to determine whether to implement PM between each job. We also compare our model with a periodical maintenance policy cited from Cassady and Kutanoglu (2015).
