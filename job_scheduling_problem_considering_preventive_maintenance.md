@@ -52,7 +52,8 @@ However, the model we mention above is nonlinear and the Gurobi cannot solve whe
 
 ![](https://i.imgur.com/2FyfJHy.png)
 
-The objective value is to minimize the total weighted completion time. Constraints (7) define the expected value of completion time for the i_th job and replace the polynomial function into a piecewise function. Constraints (8) to (18) are some new constraints due to the piecewise process. Constraints (3) are some binary constraints for the decision variables due to the piecewise process. The rest of the constraints are the same as mentioned above. The notation of our model is listed below.
+The objective value is to minimize the total weighted completion time. Constraints (7) define the expected value of completion time for the ![formula](https://render.githubusercontent.com/render/math?math=i_{th}) job and replace the polynomial function into a piecewise function. Constraints (8) to (18) are some new constraints due to the piecewise process. Constraints (3) are some binary constraints for the decision variables due to the piecewise process. The rest of the constraints are the same as mentioned above. The notation of our model is listed below.
+
 ![](https://i.imgur.com/xa9PKIo.png)
 ![](https://i.imgur.com/QK5wwTF.png)
 
@@ -72,7 +73,7 @@ To evaluate the performance of our proposed model, we adopt three factors to ana
 The code where we generate the data set is proposed [here](https://github.com/Janeliao123/Job-scheduling-problem-considering-PM/blob/main/create_testdata.ipynb).
 
 ### 3.2 Evaluation method
-To evaluate our model, we use ‘saving’ to check the performance. Saving is defined as the difference between the objective value of the target method and the objective value of the greedy method. Since in our case, we want to minimize the weighted time, the greedy method is sure to get the optimal minimized value for each scenario. The method that has the lower saving, showing it finds a solution that is close to the optimal minimized value and thus has better performance.
+To evaluate our model, we use **‘saving’** to check the performance. Saving is defined as the difference between the objective value of the target method and the objective value of the greedy method. Since in our case, we want to minimize the weighted time, the greedy method is sure to get the optimal minimized value for each scenario. The method that has the lower saving, showing it finds a solution that is close to the optimal minimized value and thus has better performance.
 
 ### 3.3 Experiment result
 
