@@ -3,6 +3,7 @@
 **Table of Contents**
 - [1. Introduction](#1-Introduction)
     - [1.1 Job scheduling problem](##1.1-Job-scheduling-problem) 
+    - [1.2 Maintenance planning problem](##1.2-Maintenance-planning-problem)
 - [2.Methodology](#2-Methodology)
     - [2.1 Job Scheduling](#2.1-Job-Scheduling)
     - [2.2 PM Planning](#2.2-PM-Planning)
