@@ -50,9 +50,9 @@ However, the model we mention above is nonlinear and the Gurobi cannot solve whe
 
 #### The peicewise stochastic model
 
-![](https://i.imgur.com/2FyfJHy.png)
+![](https://i.imgur.com/FjYR3dO.png)
 
-The objective value is to minimize the total weighted completion time. Constraints (7) define the expected value of completion time for the ![formula](https://render.githubusercontent.com/render/math?math=i_{th}) job and replace the polynomial function into a piecewise function. Constraints (8) to (18) are some new constraints due to the piecewise process. Constraints (3) are some binary constraints for the decision variables due to the piecewise process. The rest of the constraints are the same as mentioned above. The notation of our model is listed below.
+The objective value is to minimize the total weighted completion time. Constraints (6) define the expected value of completion time for the ![formula](https://render.githubusercontent.com/render/math?math=i_{th}) job and replace the polynomial function into a piecewise function. Constraints (7) to (16) are some new constraints due to the piecewise process. Constraints (17) are some binary and sign constraints for the decision variables due to the piecewise process. The rest of the constraints are the same as mentioned above. The notation of our model is listed below.
 
 ![](https://i.imgur.com/xa9PKIo.png)
 ![](https://i.imgur.com/QK5wwTF.png)
